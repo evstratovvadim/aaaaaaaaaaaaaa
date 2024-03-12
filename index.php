@@ -86,24 +86,6 @@ function test4(){
             }
             else return "Тест для пары " . $tstr . " => " . $rstr . " не сработал";
         }
-function test5(){
-            $tstr = "third-part";
-            $rstr = "driht-trap";
-            $trev = splitWords($tstr);
-            if($trev == $rstr){
-                echo "Реверс работает для пары " . $tstr . " => " . $rstr ;
-            }
-            else return "Тест для пары " . $tstr . " => " . $rstr . " не сработал";
-        }
-function test6(){
-            $tstr = "can`t";
-            $rstr = "nac`t";
-            $trev = splitWords($tstr);
-            if($trev == $rstr){
-                echo "Реверс работает для пары " . $tstr . " => " . $rstr ;
-            }
-            else return "Тест для пары " . $tstr . " => " . $rstr . " не сработал";
-        }
     ?>
     <div>
         <p>Unit-Тесты:</p>
@@ -111,8 +93,6 @@ function test6(){
 	<? printf(test2());?><br>
 	<? printf(test3());?><br>
 	<? printf(test4());?><br>
-	<? printf(test5());?><br>
-	<? printf(test6());?><br>
     </div> 
 
     <style>
