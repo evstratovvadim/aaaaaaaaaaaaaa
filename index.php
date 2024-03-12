@@ -28,7 +28,7 @@
 
     <?php 
         function splitWords($str){
-            $arr = explode(' ', $str); // Отделяем слова
+            $arr =  explode(' ', $str); // Отделяем слова
             foreach ($arr as $key => $elem) {
                 $arr[$key] = reversWords($elem); // пробегаем по каждому слову и применяем функцию для изменения порядка символов 
             }
@@ -49,9 +49,51 @@
                 $num --;
             }
             return implode($arr); // Восстанавливаем строку  
-        } 
-
+        }
+        function test1(){
+            $tstr = "Cat";
+            $rstr = "Tac";
+            $trev = splitWords($tstr);
+            if($trev == $rstr){
+                echo "Реверс работает для пары " . $tstr . " => " . $rstr ;
+            }
+            else return "Тест для пары " . $tstr . " => " . $rstr . " не сработал";
+        }
+    function test2(){
+            $tstr = "elEpHant";
+            $rstr = "tnAhPele";
+            $trev = splitWords($tstr);
+            if($trev == $rstr){
+                echo "Реверс работает для пары " . $tstr . " => " . $rstr ;
+            }
+            else return "Тест для пары " . $tstr . " => " . $rstr . " не сработал";
+        }
+function test3(){
+            $tstr = "cat,";
+            $rstr = "tac,";
+            $trev = splitWords($tstr);
+            if($trev == $rstr){
+                echo "Реверс работает для пары " . $tstr . " => " . $rstr ;
+            }
+            else return "Тест для пары " . $tstr . " => " . $rstr . " не сработал";
+        }
+function test4(){
+            $tstr = "is 'cold' now";
+            $rstr = "si 'dloc' won";
+            $trev = splitWords($tstr);
+            if($trev == $rstr){
+                echo "Реверс работает для пары " . $tstr . " => " . $rstr ;
+            }
+            else return "Тест для пары " . $tstr . " => " . $rstr . " не сработал";
+        }
     ?>
+    <div>
+        <p>Unit-Тесты:</p>
+        <? printf(test1());?><br>
+	<? printf(test2());?><br>
+	<? printf(test3());?><br>
+	<? printf(test4());?><br>
+    </div> 
 
     <style>
         .full{
